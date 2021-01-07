@@ -1,7 +1,6 @@
 const router = require('express').Router();
+const authRoutes = require('./auth');
 
-router.route('/api').get((req, res) => {
-	res.send('MySpotify API');
-});
+router.use('/auth', authRoutes);
 
 module.exports = router;

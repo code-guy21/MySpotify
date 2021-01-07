@@ -11,7 +11,7 @@ module.exports = {
 					scope: 'user-read-private user-read-email',
 					redirect_uri:
 						process.env.NODE_ENV === 'production'
-							? 'https://myspotify.herokuapp.com/api/auth/callback*'
+							? 'https://myspotify.herokuapp.com/api/auth/callback?'
 							: 'http://localhost:3001/api/auth/callback',
 					show_dialog: true,
 				})

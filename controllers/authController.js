@@ -29,4 +29,12 @@ module.exports = {
 				: 'http://localhost:3000'
 		);
 	}),
+
+	currentUser: asyncHandler(async (req, res) => {
+		res.send(req.cookies.spotify_auth);
+	}),
+
+	logout: asyncHandler(async (req, res) => {
+		res.clearCookie('spotify_auth').send('logged out');
+	}),
 };
